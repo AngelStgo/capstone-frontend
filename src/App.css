@@ -5,11 +5,50 @@
   text-align: center;
 }
 
+ /* .mainPage {
+  background-image: url(./images/inHarmony-kelogs.jpeg);
+  opacity:calc(50%) ;
+  /* background-size: cover; 
+  background-repeat: no-repeat; 
+  background-clip: border-box;  */
+  /* background-size: contain; */
+  /* }   */
+
 .header {
-  padding-bottom: 15px;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.header h1 {
+  padding: 4rem;
+}
+
+.header p {
+  padding: 4rem;
 }
 
 .navBar {
   display: flex;
   justify-content: space-between;
+  padding: 4rem;
+}
+
+.artistCard {
+  max-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 3rem;
+  border: 1px solid azure;
+  margin: 3rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem;
+}
+
+.navList {
+  justify-content: center;
 }

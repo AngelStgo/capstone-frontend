@@ -1,11 +1,43 @@
 function Footer() {
     return (
         <div className="footer">
-            <a href="#">Location</a>
-            <a href="#">Hours</a>
-            <a href="#">Contact</a>
-            <a href="#">Instagram</a>
-            <a href="#">FaceBook</a>
+
+            <div className="navList">
+                 <a href="#">Location</a>
+            <ul>
+                <p>This location</p>
+                <p>New location</p>
+            </ul>
+            </div>
+           
+            <div className="navList">
+                <a href="#">Hours</a>
+                <ol>
+                   <p>Monday: 10am - 4pm</p>
+                   <p>Tuesday: 10am - 4pm</p>
+                   <p>Wednesday: 10am - 4pm</p>
+                   <p>Thursday: 11am - 4pm</p>
+                   <p>Friday: 11am - 5pm</p>
+                   <p>Weekends: Closed</p>
+                </ol>
+            </div>
+
+            <div className="navList">
+                <a href="#">Contact</a>
+                <ol>
+                    <p>thisemail@email.com</p>
+                    <p>thatemail@email.com</p>
+                </ol>
+            </div>
+
+
+            <div className="navList">
+            <ol>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+            </ol>
+            </div>
+            
         </div>
     )
 }

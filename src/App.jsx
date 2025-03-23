@@ -10,15 +10,17 @@ import Footer from './components/Footer'
 function App() {
 
   return (
-    <div className='mainPage'>
+    <div className="mainPage">
       <Header/>
+      <hr />
       <NavBar/>
       <hr/>
       <ArtistCard/>
+      <hr />
       <Review/>
       <hr/>
       <ApiDisplay/>
-      <hr/>
+      {/* <hr/> */}
       <Footer/>
     </div>
   )
