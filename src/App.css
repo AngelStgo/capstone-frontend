@@ -1,0 +1,15 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  padding-bottom: 15px;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+}
