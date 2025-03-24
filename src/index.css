@@ -2,24 +2,48 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
+background-image: url(./assets/Venation-Dark.jpg);
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #2a2a2a;
+  background-color: #323232eb;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+/* Mobile-first styles (default) */
+@media (min-width: 486px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
 }
-a:hover {
-  color: #2c32a7;
+
+/* Tablet */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+/* Laptop */
+@media (min-width: 1024px) {
+  body {
+    font-size: 19px;
+    padding: 25px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1200px) {
+  body {
+    font-size: 20px;
+    padding: 30px;
+  }
 }
 
 body {

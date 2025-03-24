@@ -3,7 +3,7 @@ function Footer() {
         <div className="footer">
 
             <div className="navList">
-                 <a href="#">Location</a>
+                 <h3>Location</h3>
             <ul>
                 <p>This location</p>
                 <p>New location</p>
@@ -11,7 +11,7 @@ function Footer() {
             </div>
            
             <div className="navList">
-                <a href="#">Hours</a>
+                <h3>Hours</h3>
                 <ol>
                    <p>Monday: 10am - 4pm</p>
                    <p>Tuesday: 10am - 4pm</p>
@@ -23,7 +23,7 @@ function Footer() {
             </div>
 
             <div className="navList">
-                <a href="#">Contact</a>
+                <h3>Contact</h3>
                 <ol>
                     <p>thisemail@email.com</p>
                     <p>thatemail@email.com</p>
@@ -31,7 +31,8 @@ function Footer() {
             </div>
 
 
-            <div className="navList">
+            <div className="footerLinks">
+                <h3>Connect with Us</h3>
             <ol>
                 <a href="#">Instagram</a>
                 <a href="#">Facebook</a>

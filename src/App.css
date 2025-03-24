@@ -1,18 +1,10 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem;
   text-align: center;
+  background-color: rgba(32, 32, 32, 0.903);
 }
-
- /* .mainPage {
-  background-image: url(./images/inHarmony-kelogs.jpeg);
-  opacity:calc(50%) ;
-  /* background-size: cover; 
-  background-repeat: no-repeat; 
-  background-clip: border-box;  */
-  /* background-size: contain; */
-  /* }   */
 
 .header {
   padding-top: 6rem;
@@ -21,6 +13,7 @@
 
 .header h1 {
   padding: 4rem;
+  text-decoration: underline;
 }
 
 .header p {
@@ -33,22 +26,72 @@
   padding: 4rem;
 }
 
+.navBar h3 {
+  text-decoration: underline;
+}
+
+.navBar a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.artistDisplay {
+  display: flex;
+  justify-content: center;
+}
+
 .artistCard {
   max-width: 200px;
+  max-height: fit-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 3rem;
-  border: 1px solid azure;
+  padding: 1rem;
+  /* border: 1px solid azure; */
   margin: 3rem;
+}
+
+.artistCard img {
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+}
+
+.artistCard a {
+  text-decoration: underline;
+    font-weight: 700;
+    color: #e6e6e6;
+    text-decoration: underline;
+    border: 2px solid #e6e6e6;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.artistCard a:hover {
+  color: #1f1f1f;
+  background-color: rgb(207, 207, 207);
+}
+
+.reviewCard {
+  max-width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  color: #e6e6e6;
+  background-color: rgba(20, 21, 21, 0.527);
+  padding: 1rem;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   padding: 4rem;
+  margin: 1rem;
+}
+.footer h3 {
+  text-decoration: underline;
 }
 
-.navList {
-  justify-content: center;
-}
+ nav, main, footer {
+  background-color: rgba(16, 16, 16, 0.892);
+ }
