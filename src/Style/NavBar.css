@@ -19,9 +19,9 @@
   
   .navbar a {
     color: white;
-    text-decoration: none;
+    text-decoration: underline;
   }
   
   .navbar a:hover {
-    text-decoration: underline;
+    color: rgba(182, 182, 182, 0.892);
   }
