@@ -1,6 +1,6 @@
 
 import axios from "axios"
-import ArtistPage from "./ArtistPage";
+import ArtistPage from "../../pages/ArtistPage";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import profilePic from "../assets/profileIcon.png"
@@ -21,7 +21,7 @@ function ArtistCard() {
         {artists.map((artist) => (
           <div className="artistCard">
             <img src={profilePic} alt="profile photo"/>
-            <Link key={artist._id} to={`/artist/${artist._id}`} >View Gallery</Link>
+            <Link key={artist._id} to={`/api/artist/${artist._id}`} >View Gallery</Link>
             <h2>{artist.name}</h2>
             <p>{artist.specialty}</p>
             <p>{artist.bio}</p>

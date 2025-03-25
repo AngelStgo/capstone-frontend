@@ -1,6 +1,6 @@
 
-import Header from "./Header";
-import Footer from "./Footer"
+import Header from "../src/components/Header";
+import Footer from "../src/components/Footer"
 
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -11,17 +11,27 @@ function ArtistPage() {
   const [artist, setArtist] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:4000/api/artist/${id}`)
-    .then((response) => setArtist(response.data))
-      .catch((error) => console.error("Error fetching artist:", error));
-  }, [id]);
+    const fetchArtistPage = async () => {
+        try {
+            const response = await axios.get(`http://localhost:4000/api/artist/${id}`)
+            setArtist(response.data)
+        } catch (e) {
+            console.error("Error fetching artist:", e );
+        }
+    }
+    fetchArtistPage()
+     // .then((response) => setArtist(response.data))
+    //   .catch((error) => console.error("Error fetching artist:", error));
+   }, [id]);
+   
+ 
 
   if (!artist) return <p>Just a sec...</p>;
 
   return (
     <div>
         {/* how to add {artist.name} inside Header as props? */}
-        <Header/>
+        {/* <Header/> */}
       <h1>{artist.name}</h1>
       <p>{artist.bio}</p>
       <h3>Specialty: {artist.specialty}</h3>

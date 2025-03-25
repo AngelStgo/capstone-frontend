@@ -6,6 +6,12 @@
   background-color: rgba(32, 32, 32, 0.903);
 }
 
+.topNav a {display: flex;
+  justify-content: space-between;
+  text-decoration: underline;
+  color: aliceblue;
+}
+
 .header {
   padding-top: 6rem;
   padding-bottom: 4rem;
@@ -94,4 +100,6 @@
 
  nav, main, footer {
   background-color: rgba(16, 16, 16, 0.892);
+  padding: 1rem;
+  margin: 1rem;
  }
