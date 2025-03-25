@@ -99,7 +99,8 @@
 }
 
  nav, main, footer {
-  background-color: rgba(16, 16, 16, 0.892);
+  background-color: rgba(24, 24, 24, 0.892);
   padding: 1rem;
   margin: 1rem;
+  width: 100%;
  }

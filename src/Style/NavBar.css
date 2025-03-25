@@ -2,8 +2,8 @@
     position: sticky;
     top: 0;
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: rgba(16, 16, 16, 0.769);
+    color: rgb(235, 235, 235);
     padding: 15px;
     display: flex;
     justify-content: space-between;

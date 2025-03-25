@@ -5,11 +5,11 @@ import "../Style/NavBar.css"
 function NavBar() {
   return (
     <nav className="navbar">
-    <h1>Tattoo Studio</h1>
+    <h1>Astraea Luas</h1>
     <ul>
       <li><Link to="/">Home</Link></li>
-      <li><Link to="/appointment">Book Appointment</Link></li>
-      <li><Link to="/artists">Artists</Link></li>
+      <li><Link to="/appointment">Book an Appointment</Link></li>
+      <li><Link to="/review">Review</Link></li>
     </ul>
   </nav>
 );
