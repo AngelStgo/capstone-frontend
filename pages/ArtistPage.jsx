@@ -36,9 +36,9 @@ function ArtistPage() {
       <p>{artist.bio}</p>
       <h3>Specialty: {artist.specialty}</h3>
       <div className="artistGallery">
-        {artist.images.map((img, index) => (
-          <img key={index} src={img} alt={`Artwork by ${artist.name}`} />
-        ))}
+        {/* {artist.images.map((img, index) => (
+          <img key={index} src={img} alt={`Art by ${artist.name}`} />
+        ))} */}
       </div>
       <Footer/>
     </div>

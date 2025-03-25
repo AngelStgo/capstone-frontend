@@ -1,6 +1,5 @@
 
 import axios from "axios"
-import ArtistPage from "../../pages/ArtistPage";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import profilePic from "../assets/profileIcon.png"
@@ -8,7 +7,7 @@ import profilePic from "../assets/profileIcon.png"
 
 // RENDER your artists data 
 function ArtistCard() {
-    const [artists, setArtists] = useState([]);
+    const [artist, setArtists] = useState([]);
 
     useEffect(() => {
         axios.get("http://localhost:4000/api/artist") // Fetch from backend
@@ -18,7 +17,7 @@ function ArtistCard() {
   
     return (
       <div className="artistDisplay">
-        {artists.map((artist) => (
+        {artist.map((artist) => (
           <div className="artistCard">
             <img src={profilePic} alt="profile photo"/>
             <Link key={artist._id} to={`/api/artist/${artist._id}`} >View Gallery</Link>

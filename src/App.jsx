@@ -9,6 +9,7 @@ import Homepage from '../pages/HomePage'
 
 
 import { Route, Routes } from "react-router-dom";
+import ArtistCard from './components/ArtistCard'
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
         <Routes>
          <Route path="/" element={<Homepage />} />
+          <Route path="/api/artist" element={<ArtistCard/>}/>
           <Route path="/api/artist/:id" element={<ArtistPage />} />
           <Route path="/review" element={<ReviewPage/>}/>
          <Route path="/appointment" element={<AppointmentPage/>}/>

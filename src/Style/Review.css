@@ -1,0 +1,30 @@
+.home-container {
+    max-width: auto;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .review-card {
+    background: rgba(139, 139, 139, 0.114);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+  }
+  
+  .review-card h3 {
+    margin: 0;
+    color: #cbcbcb;
+  }
+  
+  .review-card p {
+    margin: 5px 0;
+  }
+  
