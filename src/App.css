@@ -6,7 +6,8 @@
   background-color: rgba(32, 32, 32, 0.903);
 }
 
-.topNav a {display: flex;
+.topNav a {
+  display: flex;
   justify-content: space-between;
   text-decoration: underline;
   color: aliceblue;
@@ -37,6 +38,7 @@
 }
 
 .navBar a {
+  color: aliceblue;
   text-decoration: underline;
   cursor: pointer;
 }
@@ -45,6 +47,8 @@
 .artistDisplay {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .artistCard {
@@ -89,17 +93,31 @@
 }
 
 .footer {
+  max-width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 2rem;
   margin: 1rem;
 }
+
+.navList {
+  width: fit-content;
+  padding: 1rem;
+}
+
+.footer a {
+  color: aliceblue;
+  text-decoration: underline;
+  display: flex;
+  justify-content: space-around;
+}
+
 .footer h3 {
   text-decoration: underline;
 }
 
  nav, main, footer {
-  background-color: rgba(24, 24, 24, 0.712);
+  background-color: rgba(30, 30, 30, 0.806);
   padding: 1rem;
   margin: 1rem;
   width: 100%;

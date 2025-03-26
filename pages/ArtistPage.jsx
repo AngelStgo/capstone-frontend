@@ -23,6 +23,9 @@ function ArtistPage() {
     fetchArtistPage()
      // .then((response) => setArtist(response.data))
     //   .catch((error) => console.error("Error fetching artist:", error));
+    const interval = setInterval(fetchArtistPage, 5000);
+
+    return () => clearInterval(interval); 
    }, [id]);
    
  
@@ -31,8 +34,6 @@ function ArtistPage() {
 
   return (
     <div className="artist-page">
-        {/* how to add {artist.name} inside Header as props? */}
-        {/* <Header/> */}
       <h1>{artist.name}</h1>
       <p>{artist.bio}</p>
       <h3>Specialty: {artist.specialty}</h3>

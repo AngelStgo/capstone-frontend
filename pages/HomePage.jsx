@@ -9,13 +9,12 @@ import Footer from "../src/components/Footer";
 function Homepage() {
     return(
         <div>
-            <Header/>
+         <Header/>
 
       <main>
         <InfoBar/>
       </main>
 
-      {/* render your artist in the cards, only need 1 reusable ArtistCard component */}
       <ArtistCard/>
       
       <article>

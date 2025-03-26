@@ -17,12 +17,16 @@ function ArtistDashboard() {
     if (!newPhoto) return;
     try {
       await axios.put(`http://localhost:4000/artists/${id}/add-photo`, { photo: newPhoto });
+
+      // ArtistPage update
       setArtist((prev) => ({ ...prev, photos: [...prev.photos, newPhoto] }));
+
       setNewPhoto("");
     } catch (error) {
       console.error("Error uploading photo:", error);
     }
-  };
+};
+
 
   const handleDeletePhoto = async (photo) => {
     try {

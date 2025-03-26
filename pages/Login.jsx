@@ -22,7 +22,7 @@ function Login() {
             localStorage.setItem("token", res.data.token);
             localStorage.setItem("role", res.data.role);
             alert(`Logged in as ${res.data.role}`);
-            navigate("/home");
+            navigate("auth/artist/:id");
         } catch (error) {
             console.error("Login Error:", error.response ? error.response.data : error.message);
             setError(error.response?.data?.message || "Login failed. Please check your credentials.");

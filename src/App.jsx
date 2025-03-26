@@ -15,26 +15,23 @@ import { AuthProvider } from './context/AuthContext'
 import ArtistDashboard from '../pages/ArtistDashboard'
 
 
+
 function App() {
   
   return (
     <div className="mainPage">
       <NavBar/>
 
-        <Routes>
-         <Route path="/home" element={<Homepage />} />
-          <Route path="/artist" element={<ArtistCard/>}/>
-          <Route path="/artist/:id" element={<ArtistPage />} />
-          
-          <Route path="/review" element={<ReviewPage/>}/>
-         <Route path="/appointment" element={<AppointmentPage/>}/>
-         
-       </Routes>
 
        <AuthProvider>
           <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/artist" element={<ArtistCard/>}/>
+          <Route path="/artist/:id" element={<ArtistPage />} />
+          <Route path="/review" element={<ReviewPage/>}/>
+         <Route path="/appointment" element={<AppointmentPage/>}/>
             <Route path="/login" element={<Login />} />
-            <Route path="/auth/artist/:id" element={<ArtistDashboard/>}/>
+            <Route path="auth/artist/:id" element={<ArtistDashboard/>}/>
           </Routes>
        </AuthProvider>
 
