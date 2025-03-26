@@ -27,22 +27,6 @@
   padding: 4rem;
 }
 
-.navBar {
-  display: flex;
-  justify-content: space-between;
-  padding: 4rem;
-}
-
-.navBar h3 {
-  text-decoration: underline;
-}
-
-.navBar a {
-  color: aliceblue;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
 
 .artistDisplay {
   display: flex;
@@ -90,30 +74,6 @@
   color: #e6e6e6;
   background-color: rgba(20, 21, 21, 0.527);
   padding: 1rem;
-}
-
-.footer {
-  max-width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-  margin: 1rem;
-}
-
-.navList {
-  width: fit-content;
-  padding: 1rem;
-}
-
-.footer a {
-  color: aliceblue;
-  text-decoration: underline;
-  display: flex;
-  justify-content: space-around;
-}
-
-.footer h3 {
-  text-decoration: underline;
 }
 
  nav, main, footer {

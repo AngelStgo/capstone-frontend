@@ -1,31 +1,33 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Uncomment this to enable navigation
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import '../src/Style/Login.css';
+// import { useAuth } from "../src/context/AuthContext";
 
 function Login() {
     const [formData, setFormData] = useState({ email: "", password: "" });
     const [error, setError] = useState(""); // State for error messages
     const navigate = useNavigate(); // Use this for navigation after login
+    // const { login } = useAuth(); // Get login function from AuthContext
+
+    const login = (data) => {
+        localStorage.setItem("authData", JSON.stringify(data)); // Store user data manually
+    };
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("Submitting:", formData); // Debugging: Check what is being sent
         setError("");
     
         try {
-            const res = await axios.post("http://localhost:4000/auth/login", formData);
-            localStorage.setItem("token", res.data.token);
-            localStorage.setItem("role", res.data.role);
-            alert(`Logged in as ${res.data.role}`);
-            navigate("auth/artist/:id");
+            const res = await axios.post("http://localhost:4000/login", formData);
+            login(res.data); // Save token in localStorage
+            navigate(`/artist/${res.data.id}`);
         } catch (error) {
-            console.error("Login Error:", error.response ? error.response.data : error.message);
-            setError(error.response?.data?.message || "Login failed. Please check your credentials.");
+            console.error("Login Error:", error.response?.data || error.message);
+            setError("Login failed. Please check your credentials.");
         }
     };
 
@@ -33,7 +35,8 @@ function Login() {
         <div className="login-container">
             <form className="login-box" onSubmit={handleSubmit}>
                 <h2>Login</h2>
-                {/* Show error message if there was an error */}
+
+                {/* Display error message */}
                 {error && <div className="error-message">{error}</div>}
 
                 <input 

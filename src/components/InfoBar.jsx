@@ -1,7 +1,8 @@
 
 import { Link } from "react-router-dom";
+import '../Style/InfoBar.css'
 
-function NavBar() {
+function InfoBar() {
     return (
         <div className="navBar">
              <div className="navList">
@@ -39,4 +40,4 @@ function NavBar() {
     )
 };
 
-export default NavBar;
+export default InfoBar;

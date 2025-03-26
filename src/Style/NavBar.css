@@ -1,14 +1,15 @@
 .navbar {
     position: sticky;
     top: 0;
+    height: 7rem;
     width: 100%;
     background-color: rgba(15, 15, 15, 0.769);
     color: rgb(235, 235, 235);
-    padding: 15px;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
+    /* z-index: 1000; */
   }
   
   .navbar ul {

@@ -1,48 +1,12 @@
-
-
-import Footer from "../src/components/Footer"
-import "../src/Style/ArtistPage.css"
-
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import Footer from "../src/components/Footer";
+import "../src/Style/ArtistPage.css";
+import ArtistProfile from "../src/components/ArtistProfile";
 
 function ArtistPage() {
-  const { id } = useParams();
-  const [artist, setArtist] = useState(null);
-
-  useEffect(() => {
-    const fetchArtistPage = async () => {
-        try {
-            const response = await axios.get(`http://localhost:4000/artist/${id}`)
-            setArtist(response.data)
-        } catch (e) {
-            console.error("Error fetching artist:", e );
-        }
-    }
-    fetchArtistPage()
-     // .then((response) => setArtist(response.data))
-    //   .catch((error) => console.error("Error fetching artist:", error));
-    const interval = setInterval(fetchArtistPage, 5000);
-
-    return () => clearInterval(interval); 
-   }, [id]);
-   
- 
-
-  if (!artist) return <p>Just a sec...</p>;
-
   return (
     <div className="artist-page">
-      <h1>{artist.name}</h1>
-      <p>{artist.bio}</p>
-      <h3>Specialty: {artist.specialty}</h3>
-      <div className="portfolio-gallery">
-        {/* {artist.images.map((img, index) => (
-          <img key={index} src={img} alt={`Art by ${artist.name}`} />
-        ))} */}
-      </div>
-      <Footer/>
+      <ArtistProfile isEditable={false} />
+      <Footer />
     </div>
   );
 }
