@@ -17,7 +17,7 @@ function ReviewPage() {
     
       // Fetch artists from the backend
       useEffect(() => {
-        axios.get("http://localhost:4000/api/artist") // Update with your API route
+        axios.get("http://localhost:4000/artist") // Update with your API route
           .then((response) => {
             setArtists(response.data);
           })

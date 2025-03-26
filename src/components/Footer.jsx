@@ -30,6 +30,14 @@ function Footer() {
                 </ol>
             </div>
 
+            <div className="navList">
+                <ol>
+                <p>&copy; 2025 Tattoo Studio. All rights reserved.</p>
+                </ol>
+            </div>
+
+            
+
 
             <div className="footerLinks">
                 <h3>Connect with Us</h3>

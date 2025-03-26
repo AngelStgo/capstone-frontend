@@ -9,7 +9,7 @@ function Review() {
 
         // Fetch reviews from backend
         useEffect(() => {
-          axios.get("http://localhost:4000/api/review") 
+          axios.get("http://localhost:4000/review") 
             .then((response) => {
               setReviews(response.data);
             })

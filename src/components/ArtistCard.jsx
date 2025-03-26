@@ -10,24 +10,24 @@ function ArtistCard() {
     const [artist, setArtists] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:4000/api/artist") // Fetch from backend
+        axios.get("http://localhost:4000/artist") // Fetch from backend
         .then((response) => setArtists(response.data))
         .catch((error) => console.error("Error fetching artists:", error));
     }, []);
   
     return (
       <div className="artistDisplay">
-        {artist.map((artist) => (
-          <div className="artistCard">
-            <img src={profilePic} alt="profile photo"/>
-            <Link key={artist._id} to={`/api/artist/${artist._id}`} >View Gallery</Link>
-            <h2>{artist.name}</h2>
-            <p>{artist.specialty}</p>
-            <p>{artist.bio}</p>
-          </div>
-        ))}
-      </div>
-    );
+      {artist.map((artist) => (
+        <div key={artist._id} className="artistCard"> 
+          <img src={profilePic} alt="profile photo"/>
+          <Link to={`/artist/${artist._id}`}>View Gallery</Link> 
+          <h2>{artist.name}</h2>
+          <p>{artist.specialty}</p>
+          <p>{artist.bio}</p>
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default ArtistCard;

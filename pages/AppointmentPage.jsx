@@ -23,7 +23,7 @@ function AppointmentPage() {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:4000/api/artist") // Adjust API endpoint as needed
+    axios.get("http://localhost:4000/artist") // Adjust API endpoint as needed
       .then((response) => {
         setArtists(response.data);
       })
@@ -35,7 +35,7 @@ function AppointmentPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/appointments", formData);
+      await axios.post("http://localhost:4000/appointments", formData);
       alert("Appointment booked!");
       navigate("/appointments/confirmation"); // Redirect after success
     } catch (error) {
