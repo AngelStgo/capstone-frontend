@@ -3,7 +3,7 @@ import Header from "../src/components/Header";
 import ArtistCard from "../src/components/ArtistCard";
 import InfoBar from "../src/components/InfoBar";
 import Review from "../src/components/Review";
-import ApiDisplay from "../src/components/ApiDisplay";
+import JokeRandom from '../src/components/JokeRandom'
 import Footer from "../src/components/Footer";
 
 function Homepage() {
@@ -21,7 +21,7 @@ function Homepage() {
          <Review/>
       </article>
      
-      <ApiDisplay/>
+      <JokeRandom/>
 
       <footer>
          <Footer/>

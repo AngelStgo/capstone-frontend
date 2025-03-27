@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ArtistProfile from "../src/components/ArtistProfile";
 
@@ -5,10 +6,15 @@ function ArtistDashboard() {
   const authData = JSON.parse(localStorage.getItem("authData"));
   const navigate = useNavigate();
 
-  if (!authData) {
-    navigate("/login");
-    return null;
-  }
+  // Use useEffect to handle navigation after component mounts
+  useEffect(() => {
+    if (!authData) {
+      navigate("/login");
+    }
+  }, [authData, navigate]); // Only runs when authData or navigate changes
+
+  // Prevent rendering the dashboard if user is not authenticated
+  if (!authData) return null;
 
   return (
     <div>
@@ -19,3 +25,4 @@ function ArtistDashboard() {
 }
 
 export default ArtistDashboard;
+

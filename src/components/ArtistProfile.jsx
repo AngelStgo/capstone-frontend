@@ -1,11 +1,8 @@
 
-
+import '../style/ArtistPage.css'
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Footer from "./Footer";
-
-import '../style/ArtistPage.css'
 
 function ArtistPage() {
   const { id } = useParams();
@@ -16,7 +13,7 @@ function ArtistPage() {
   useEffect(() => {
     const fetchArtistPage = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/artist/${id}`);
+        const response = await axios.get(`http://localhost:4000/artist/${id}/dashboard`);
         setArtist(response.data);
       } catch (e) {
         console.error("Error fetching artist:", e);
@@ -32,10 +29,10 @@ function ArtistPage() {
   const handleImageUpload = async (e) => {
     e.preventDefault();
     if (!selectedFile) return;
-
+  
     const formData = new FormData();
     formData.append("photo", selectedFile);
-
+  
     try {
       const response = await axios.post(
         `http://localhost:4000/artist/${id}/upload-photo`,
@@ -47,17 +44,19 @@ function ArtistPage() {
           },
         }
       );
-
+  
       setArtist((prev) => ({
         ...prev,
         photos: [...prev.photos, response.data.photoUrl],
       }));
-
+  
       setSelectedFile(null);
     } catch (error) {
       console.error("Error uploading photo:", error);
     }
   };
+  
+  
 
   if (!artist) return <p>Just a sec...</p>;
 
@@ -80,14 +79,18 @@ function ArtistPage() {
       )}
 
       {/* Display Portfolio */}
-      <h3>Portfolio Gallery</h3>
-      <div className="portfolio-gallery">
-        {/* {artist.photos.map((img, index) => (
-          <img key={index} src={`http://localhost:4000${img}`} alt={`Art by ${artist.name}`} />
-        ))} */}
-      </div>
+<h3>Portfolio Gallery</h3>
+<div className="portfolio-gallery">
+  {artist.photos && artist.photos.length > 0 ? (
+    artist.photos.map((img, index) => (
+      <img key={index} src={`http://localhost:4000${img}`} alt={`Art by ${artist.name}`} />
+    ))
+  ) : (
+    <p>No portfolio images yet.</p>
+  )}
+</div>
 
-      <Footer/>
+    
     </div>
   );
 }

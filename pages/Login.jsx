@@ -25,6 +25,8 @@ function Login() {
             const res = await axios.post("http://localhost:4000/login", formData);
             login(res.data); // Save token in localStorage
             navigate(`/artist/${res.data.id}`);
+            console.log(res.data);
+            
         } catch (error) {
             console.error("Login Error:", error.response?.data || error.message);
             setError("Login failed. Please check your credentials.");

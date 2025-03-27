@@ -33,7 +33,7 @@ function ReviewPage() {
       const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-          await axios.post("http://localhost:4000/api/review", reviewData);
+          await axios.post("http://localhost:4000/review", reviewData);
           alert("Review submitted! Thank you!");
           navigate("/"); // Redirect to Home Page after submission
         } catch (error) {
