@@ -2,7 +2,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import profilePic from "../assets/profileIcon.png"
+import profilePic from "../assets/bankzyProfile.jpg"
 
 
 // RENDER your artists data 
