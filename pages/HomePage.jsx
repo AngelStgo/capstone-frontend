@@ -21,7 +21,7 @@ function Homepage() {
          <Review/>
       </article>
      
-      <JokeRandom/>
+      {/* <JokeRandom/> */}
 
       <footer>
          <Footer/>
